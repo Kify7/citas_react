@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import uuid from "uuid/dist/v4";
+import PropTypes from 'prop-types';
 
 const Formulario = ({ crearCita }) => {
   // Crear state de citas (state local => componente Formulario)
@@ -116,5 +117,11 @@ const Formulario = ({ crearCita }) => {
     </Fragment>
   );
 };
+
+// DOCUMENTANDO CON PROP-TYPES : Forma de documentar los componentes
+
+Formulario.propTypes = {
+  crearCita: PropTypes.func.isRequired
+}
 
 export default Formulario;
